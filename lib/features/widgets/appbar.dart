@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/uiw.dart';
 import 'package:winemonger/utils/theme/theme.dart';
@@ -23,12 +24,18 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       centerTitle: true,
       leading: Builder(builder: (context) {
-        return IconButton(
+        return title == "Dashboard" ? IconButton(
           icon: Icon(
             Icons.menu,
             color: Theme.of(context).colorScheme.appbarTextColor,
           ),
           onPressed: () => Scaffold.of(context).openDrawer(),
+        ):IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Theme.of(context).colorScheme.appbarTextColor,
+          ),
+          onPressed: () => Get.back(),
         );
       }),
       actions: [
