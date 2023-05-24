@@ -1,10 +1,11 @@
 import 'package:get/route_manager.dart';
 import '../features/dashboard/dashboard_screen.dart';
 import '../features/login/login_screen.dart';
+import '../features/splash/splash.dart';
 
 List<GetPage> routes() => [
       GetPage(
-          name: "/", page: () => Dashboard(), transition: Transition.cupertino),
+          name: "/", page: () => SplashScreen(), transition: Transition.cupertino),
       GetPage(
           name: "/dashboard",
           page: () => const Dashboard(),
