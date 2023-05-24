@@ -5,53 +5,53 @@ import '../features/splash/splash.dart';
 
 List<GetPage> routes() => [
       GetPage(
-          name: "/", page: () => SplashScreen(), transition: Transition.cupertino),
+          name: "/", page: () => DashboardScreen(), transition: Transition.cupertino),
       GetPage(
           name: "/dashboard",
-          page: () => const Dashboard(),
+          page: () => const DashboardScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/login",
-          page: () => const LogIn(),
+          page: () => const LogInScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/orders",
-          page: () => const Dashboard(),
+          page: () => const DashboardScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/orderdetailscreen",
-          page: () => const Dashboard(),
+          page: () => const DashboardScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/tastings",
-          page: () => const Dashboard(),
+          page: () => const DashboardScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/reservations",
-          page: () => const Dashboard(),
+          page: () => const DashboardScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/manufacturers",
-          page: () => const Dashboard(),
+          page: () => const DashboardScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/sales",
-          page: () => const Dashboard(),
+          page: () => const DashboardScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/products",
-          page: () => const Dashboard(),
+          page: () => const DashboardScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/customers",
-          page: () => const Dashboard(),
+          page: () => const DashboardScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/imports",
-          page: () => const Dashboard(),
+          page: () => const DashboardScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/createorders",
-          page: () => const Dashboard(),
+          page: () => const DashboardScreen(),
           transition: Transition.cupertino),
     ];

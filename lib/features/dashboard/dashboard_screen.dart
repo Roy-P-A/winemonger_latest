@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:winemonger/utils/theme/theme.dart';
+import '../drawer/drawer_section.dart';
 import '../widgets/appbar.dart';
 import '../widgets/bottom_app_bar.dart';
 import '../widgets/floating_action_button.dart';
 import 'dashboard_list.dart';
 
-class Dashboard extends StatelessWidget {
-  const Dashboard({Key? key}) : super(key: key);
+class DashboardScreen extends StatelessWidget {
+  const DashboardScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +17,7 @@ class Dashboard extends StatelessWidget {
       appBar: const CustomAppBar(
         title: 'Dashboard',
       ),
-      // drawer: Drawer1(),
+      drawer: DrawerSectionScreen(),
       body: SafeArea(
         child: Container(
           padding:

@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import 'login_controller.dart';
 import 'widgets/text_form_field.dart';
 
-class LogIn extends StatelessWidget {
-  const LogIn({Key? key}) : super(key: key);
+class LogInScreen extends StatelessWidget {
+  const LogInScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
