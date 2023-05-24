@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:winemonger/utils/theme/theme.dart';
 
 
-class FloatingActionButton1 extends StatelessWidget {
-  const FloatingActionButton1({Key? key}) : super(key: key);
+class FloatingActionButtonSection extends StatelessWidget {
+  const FloatingActionButtonSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -101,8 +101,8 @@ class DashboardScreen extends StatelessWidget {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: const FloatingActionButton1(),
-      bottomNavigationBar: const BottomAppBar1(),
+      floatingActionButton: const FloatingActionButtonSection(),
+      bottomNavigationBar: const BottomAppBarSection(),
     );
   }
 }

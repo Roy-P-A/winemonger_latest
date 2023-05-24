@@ -7,8 +7,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:winemonger/utils/theme/theme.dart';
 
 
-class BottomAppBar1 extends StatelessWidget {
-  const BottomAppBar1({Key? key}) : super(key: key);
+class BottomAppBarSection extends StatelessWidget {
+  const BottomAppBarSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

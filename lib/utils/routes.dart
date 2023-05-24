@@ -1,7 +1,14 @@
 import 'package:get/route_manager.dart';
+import '../features/customers/customers.dart';
 import '../features/dashboard/dashboard_screen.dart';
+import '../features/imports/import.dart';
 import '../features/login/login_screen.dart';
+import '../features/manufactures/manufacturers.dart';
+import '../features/products/products.dart';
+import '../features/reservations/reservation.dart';
+import '../features/sales/sales.dart';
 import '../features/splash/splash.dart';
+import '../features/tastings/tastings.dart';
 
 List<GetPage> routes() => [
       GetPage(
@@ -24,31 +31,31 @@ List<GetPage> routes() => [
           transition: Transition.cupertino),
       GetPage(
           name: "/tastings",
-          page: () => const DashboardScreen(),
+          page: () => const TastingsScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/reservations",
-          page: () => const DashboardScreen(),
+          page: () => const ReservationScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/manufacturers",
-          page: () => const DashboardScreen(),
+          page: () => const ManufacturersScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/sales",
-          page: () => const DashboardScreen(),
+          page: () => const SalesScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/products",
-          page: () => const DashboardScreen(),
+          page: () => const ProductsScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/customers",
-          page: () => const DashboardScreen(),
+          page: () => const CustomerssScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/imports",
-          page: () => const DashboardScreen(),
+          page: () => const ImportsScreen(),
           transition: Transition.cupertino),
       GetPage(
           name: "/createorders",
