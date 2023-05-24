@@ -4,6 +4,9 @@ import '../features/dashboard/dashboard_screen.dart';
 import '../features/imports/import.dart';
 import '../features/login/login_screen.dart';
 import '../features/manufactures/manufacturers.dart';
+import '../features/order/create_order/create_order_screen.dart';
+import '../features/order/order.dart';
+import '../features/order/order_detailscreen/order_detail_screen.dart';
 import '../features/products/products.dart';
 import '../features/reservations/reservation.dart';
 import '../features/sales/sales.dart';
@@ -12,7 +15,9 @@ import '../features/tastings/tastings.dart';
 
 List<GetPage> routes() => [
       GetPage(
-          name: "/", page: () => DashboardScreen(), transition: Transition.cupertino),
+          name: "/",
+          page: () => DashboardScreen(),
+          transition: Transition.cupertino),
       GetPage(
           name: "/dashboard",
           page: () => const DashboardScreen(),
@@ -23,12 +28,18 @@ List<GetPage> routes() => [
           transition: Transition.cupertino),
       GetPage(
           name: "/orders",
-          page: () => const DashboardScreen(),
+          page: () => const OrdersScreen(),
           transition: Transition.cupertino),
       GetPage(
-          name: "/orderdetailscreen",
-          page: () => const DashboardScreen(),
-          transition: Transition.cupertino),
+        name: "/orderdetailscreen",
+        page: () => const OrderDetailScreen(),
+        transition: Transition.cupertino,
+      ),
+      GetPage(
+        name: "/createorders",
+        page: () => const CreateOrderScreen(),
+        transition: Transition.cupertino,
+      ),
       GetPage(
           name: "/tastings",
           page: () => const TastingsScreen(),
