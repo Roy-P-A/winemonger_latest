@@ -19,330 +19,339 @@ class DrawerSectionScreen extends StatelessWidget with UserStateMixin {
       child: Drawer(
         backgroundColor: Theme.of(context).colorScheme.drawerbackgroundColor,
         child: SingleChildScrollView(
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 25),
-            child: Column(
-              children: [
-                const SizedBox(
-                  height: 20,
-                ),
-                SizedBox(
-                  child: Column(
-                    children: [
-                      ListTile(
-                        title: Obx(
-                          () => Text(
-                            "${_controller.firstname} ${_controller.lastname}",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .drawerTextColor1,
-                              fontSize: 17,
-                            ),
-                          ),
-                        ),
-                        subtitle: Obx(() => Text(
-                              _controller.userlevel == "100" ? "Admin" : _controller.userlevel == "80" ? "Manager" : _controller.userlevel == "" ? "" : "Sales Representative",
+          child: SafeArea(
+            child: SizedBox(
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  SizedBox(
+                    child: Column(
+                      children: [
+                        ListTile(
+                          title: Obx(
+                            () => Text(
+                              "${_controller.firstname} ${_controller.lastname}",
                               style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 color: Theme.of(context)
                                     .colorScheme
                                     .drawerTextColor1,
-                                fontSize: 12,
+                                fontSize: 17,
                               ),
-                            )),
-                        leading: Iconify(
-                          Healthicons.ui_user_profile_outline,
-                          size: 50,
-                          color: Theme.of(context).colorScheme.drawerTextColor1,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 1,
-                        color: Theme.of(context).colorScheme.drawerDividerColor,
-                        indent: 20.0,
-                        endIndent: 20.0,
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                SizedBox(
-                  child: Column(
-                    children: [
-                      InkWell(
-                        child: Container(
-                          padding: const EdgeInsets.only(
-                              left: 20, right: 10, top: 15, bottom: 15),
-                          child: Row(
-                            children: [
-                              SizedBox(
-                                height: 20,
-                                width: 20,
-                                child: SvgPicture.asset(
-                                  'assets/svgs/drawer/orders.svg',
+                            ),
+                          ),
+                          subtitle: Obx(() => Text(
+                                _controller.userlevel == "100"
+                                    ? "Admin"
+                                    : _controller.userlevel == "80"
+                                        ? "Manager"
+                                        : _controller.userlevel == ""
+                                            ? ""
+                                            : "Sales Representative",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
                                   color: Theme.of(context)
                                       .colorScheme
-                                      .drawerIconColor,
+                                      .drawerTextColor1,
+                                  fontSize: 12,
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 11,
-                              ),
-                              Text(
-                                "Orders",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .drawerTextColor1),
-                              ),
-                            ],
+                              )),
+                          leading: Iconify(
+                            Healthicons.ui_user_profile_outline,
+                            size: 50,
+                            color:
+                                Theme.of(context).colorScheme.drawerTextColor1,
                           ),
                         ),
-                        onTap: () {
-                          Get.toNamed('/orders');
-                        },
-                      ),
-                      InkWell(
-                        child: Container(
-                          padding: const EdgeInsets.only(
-                              left: 20, right: 10, top: 15, bottom: 15),
-                          child: Row(
-                            children: [
-                              SizedBox(
+                        Divider(
+                          thickness: 1,
+                          color:
+                              Theme.of(context).colorScheme.drawerDividerColor,
+                          indent: 20.0,
+                          endIndent: 20.0,
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  SizedBox(
+                    child: Column(
+                      children: [
+                        InkWell(
+                          child: Container(
+                            padding: const EdgeInsets.only(
+                                left: 20, right: 10, top: 15, bottom: 15),
+                            child: Row(
+                              children: [
+                                SizedBox(
                                   height: 20,
                                   width: 20,
-                                  child: Iconify(
-                                    MdiLight.cart,
+                                  child: SvgPicture.asset(
+                                    'assets/svgs/drawer/orders.svg',
                                     color: Theme.of(context)
                                         .colorScheme
                                         .drawerIconColor,
-                                  )),
-                              const SizedBox(
-                                width: 11,
-                              ),
-                              Text("Offers",
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 11,
+                                ),
+                                Text(
+                                  "Orders",
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
                                       color: Theme.of(context)
                                           .colorScheme
-                                          .drawerTextColor1))
-                            ],
-                          ),
-                        ),
-                        onTap: () {},
-                      ),
-                      InkWell(
-                        child: Container(
-                          padding: const EdgeInsets.only(
-                              left: 20, right: 10, top: 15, bottom: 15),
-                          child: Row(
-                            children: [
-                              SizedBox(
-                                height: 20,
-                                width: 20,
-                                child: SvgPicture.asset(
-                                  'assets/svgs/drawer/tastings.svg',
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .drawerIconColor,
+                                          .drawerTextColor1),
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 11,
-                              ),
-                              Text(
-                                "Tastings",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .drawerTextColor1),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
+                          onTap: () {
+                            Get.toNamed('/orders');
+                          },
                         ),
-                        onTap: () {
-                          Get.toNamed('/tastings');
-                        },
-                      ),
-                      InkWell(
-                        child: Container(
-                          padding: const EdgeInsets.only(
-                              left: 20, right: 10, top: 15, bottom: 15),
-                          child: Row(
-                            children: [
-                              SizedBox(
-                                height: 20,
-                                width: 20,
-                                child: SvgPicture.asset(
-                                  'assets/svgs/drawer/products.svg',
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .drawerIconColor,
+                        InkWell(
+                          child: Container(
+                            padding: const EdgeInsets.only(
+                                left: 20, right: 10, top: 15, bottom: 15),
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                    height: 20,
+                                    width: 20,
+                                    child: Iconify(
+                                      MdiLight.cart,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .drawerIconColor,
+                                    )),
+                                const SizedBox(
+                                  width: 11,
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 11,
-                              ),
-                              Text(
-                                "Products",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .drawerTextColor1),
-                              ),
-                            ],
+                                Text("Offers",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .drawerTextColor1))
+                              ],
+                            ),
                           ),
+                          onTap: () {},
                         ),
-                        onTap: () {
-                          Get.toNamed('/products');
-                        },
-                      ),
-                      InkWell(
-                        child: Container(
-                          padding: const EdgeInsets.only(
-                              left: 20, right: 10, top: 15, bottom: 15),
-                          child: Row(
-                            children: [
-                              SizedBox(
-                                width: 20,
-                                height: 20,
-                                child: SvgPicture.asset(
-                                  'assets/svgs/drawer/sales.svg',
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .drawerIconColor,
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 11,
-                              ),
-                              Text(
-                                "Sales",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .drawerTextColor1),
-                              ),
-                            ],
-                          ),
-                        ),
-                        onTap: () {
-                          Get.toNamed('/sales');
-                        },
-                      ),
-                      InkWell(
-                        child: Container(
-                          padding: const EdgeInsets.only(
-                              left: 20, right: 10, top: 15, bottom: 15),
-                          child: Row(
-                            children: [
-                              SizedBox(
-                                height: 20,
-                                width: 20,
-                                child: SvgPicture.asset(
-                                  'assets/svgs/drawer/customers.svg',
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .drawerIconColor,
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 11,
-                              ),
-                              Text(
-                                "Customer",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .drawerTextColor1),
-                              ),
-                            ],
-                          ),
-                        ),
-                        onTap: () {
-                          Get.toNamed('/customers');
-                        },
-                      ),
-                      InkWell(
-                        child: Container(
-                          padding: const EdgeInsets.only(
-                              left: 20, right: 10, top: 15, bottom: 15),
-                          child: Row(
-                            children: [
-                              SizedBox(
-                                height: 20,
-                                width: 20,
-                                child: SvgPicture.asset(
-                                  'assets/svgs/drawer/imports.svg',
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .drawerIconColor,
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 11,
-                              ),
-                              Text(
-                                "Imports",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .drawerTextColor1),
-                              ),
-                            ],
-                          ),
-                        ),
-                        onTap: () {
-                          Get.toNamed('/imports');
-                        },
-                      ),
-                      InkWell(
-                        child: Container(
-                          padding: const EdgeInsets.only(
-                              left: 20, right: 10, top: 15, bottom: 15),
-                          child: Row(
-                            children: [
-                              SizedBox(
+                        InkWell(
+                          child: Container(
+                            padding: const EdgeInsets.only(
+                                left: 20, right: 10, top: 15, bottom: 15),
+                            child: Row(
+                              children: [
+                                SizedBox(
                                   height: 20,
                                   width: 20,
-                                  child: Iconify(
-                                    MdiLight.logout,
+                                  child: SvgPicture.asset(
+                                    'assets/svgs/drawer/tastings.svg',
                                     color: Theme.of(context)
                                         .colorScheme
                                         .drawerIconColor,
-                                  )),
-                              const SizedBox(
-                                width: 11,
-                              ),
-                              Text(
-                                "Logout",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 11,
+                                ),
+                                Text(
+                                  "Tastings",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .drawerTextColor1),
+                                ),
+                              ],
+                            ),
+                          ),
+                          onTap: () {
+                            Get.toNamed('/tastings');
+                          },
+                        ),
+                        InkWell(
+                          child: Container(
+                            padding: const EdgeInsets.only(
+                                left: 20, right: 10, top: 15, bottom: 15),
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  height: 20,
+                                  width: 20,
+                                  child: SvgPicture.asset(
+                                    'assets/svgs/drawer/products.svg',
                                     color: Theme.of(context)
                                         .colorScheme
-                                        .drawerTextColor1),
-                              ),
-                            ],
+                                        .drawerIconColor,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 11,
+                                ),
+                                Text(
+                                  "Products",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .drawerTextColor1),
+                                ),
+                              ],
+                            ),
                           ),
+                          onTap: () {
+                            Get.toNamed('/products');
+                          },
                         ),
-                        onTap: () {
-                          logout();
-                        },
-                      ),
-                    ],
+                        InkWell(
+                          child: Container(
+                            padding: const EdgeInsets.only(
+                                left: 20, right: 10, top: 15, bottom: 15),
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  width: 20,
+                                  height: 20,
+                                  child: SvgPicture.asset(
+                                    'assets/svgs/drawer/sales.svg',
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .drawerIconColor,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 11,
+                                ),
+                                Text(
+                                  "Sales",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .drawerTextColor1),
+                                ),
+                              ],
+                            ),
+                          ),
+                          onTap: () {
+                            Get.toNamed('/sales');
+                          },
+                        ),
+                        InkWell(
+                          child: Container(
+                            padding: const EdgeInsets.only(
+                                left: 20, right: 10, top: 15, bottom: 15),
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  height: 20,
+                                  width: 20,
+                                  child: SvgPicture.asset(
+                                    'assets/svgs/drawer/customers.svg',
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .drawerIconColor,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 11,
+                                ),
+                                Text(
+                                  "Customer",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .drawerTextColor1),
+                                ),
+                              ],
+                            ),
+                          ),
+                          onTap: () {
+                            Get.toNamed('/customers');
+                          },
+                        ),
+                        InkWell(
+                          child: Container(
+                            padding: const EdgeInsets.only(
+                                left: 20, right: 10, top: 15, bottom: 15),
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  height: 20,
+                                  width: 20,
+                                  child: SvgPicture.asset(
+                                    'assets/svgs/drawer/imports.svg',
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .drawerIconColor,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 11,
+                                ),
+                                Text(
+                                  "Imports",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .drawerTextColor1),
+                                ),
+                              ],
+                            ),
+                          ),
+                          onTap: () {
+                            Get.toNamed('/imports');
+                          },
+                        ),
+                        InkWell(
+                          child: Container(
+                            padding: const EdgeInsets.only(
+                                left: 20, right: 10, top: 15, bottom: 15),
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                    height: 20,
+                                    width: 20,
+                                    child: Iconify(
+                                      MdiLight.logout,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .drawerIconColor,
+                                    )),
+                                const SizedBox(
+                                  width: 11,
+                                ),
+                                Text(
+                                  "Logout",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .drawerTextColor1),
+                                ),
+                              ],
+                            ),
+                          ),
+                          onTap: () {
+                            logout();
+                          },
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/uiw.dart';
 import 'package:winemonger/utils/theme/theme.dart';
-// import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -32,8 +32,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         );
       }),
       actions: [
-        Badge(
-          //position: BadgePosition.topEnd(top: 14, end: 12),
+        badges.Badge(
+          position: badges.BadgePosition.topEnd(top: 14, end: 12),
           child: IconButton(
             icon: Iconify(
               Uiw.bell,
@@ -55,6 +55,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(60);
 }
